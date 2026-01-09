@@ -2,7 +2,8 @@
 
 **Author:** Deraina Cani RAKOTONIAINA ANTSASOA  
 **Tools:** `SQL` | `Python` | `Power BI` | `Excel`  
-**Contact:** [LinkedIn Profile](Your_Profile_Link_Here) | 📱 +261 34 09 821 54
+**Contact:** [LinkedIn Profile]([https://www.linkedin.com/in/deraina-cani/)](https://www.linkedin.com/in/deraina-cani/)) 
+| 📱 +261 34 09 821 54
 
 ---
 
