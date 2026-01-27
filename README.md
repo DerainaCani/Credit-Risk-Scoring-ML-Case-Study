@@ -88,7 +88,9 @@ This project utilizes a **six-phase analytical approach** combining deep explora
 
 ### Phase 1: Data Understanding & Quality Assessment
 **Objective:** Conduct a comprehensive audit of the **38,576-record** loan portfolio to establish a “Single Source of Truth,” ensuring data integrity and alignment with banking business rules prior to modeling.
+
 > 📁 **Technical Resource:** [View Data Cleaning & Audit Notebook](./Notebooks/01_data_cleaning.ipynb)
+
 #### 🛠️ Activities
 * **Ingestion & Profiling:** Loaded and profiled 38,576 records across 24 financial and demographic variables.
 * **Multidimensional Quality Audit:** Evaluated the dataset across **6 rigorous dimensions**: Completeness, Validity, Consistency, Uniqueness, Timeliness, and Accuracy.
@@ -116,6 +118,8 @@ This project utilizes a **six-phase analytical approach** combining deep explora
 ### Phase 2: Exploratory Data Analysis (EDA)
 **Objective:** Dissect behavioral and financial drivers to isolate the **“Risk Signatures”** that distinguish solvent borrowers from defaults.
 
+> 📁 **Technical Resource:** [View Exploratory Data Analysis Notebook](./Notebooks/02_eda.ipynb)
+
 #### 🛠️ Activities
 * **Target Distribution Analysis:** Confirmed the 85.8%/14.2% split, establishing the necessity for **High Recall** on the minority "Charged Off" class.
 * **Univariate Profiling:** Used histograms, boxplots, and violin plots to identify distribution skews and inform necessary feature transformations.
@@ -136,6 +140,8 @@ This project utilizes a **six-phase analytical approach** combining deep explora
 ## 🏗️ Phase 3: Feature Engineering
 
 **Objective:** To transform raw loan application data into high-signal predictive features, culminating in a **proprietary Composite Risk Score (CRS)** that quantifies default probability.
+
+> 📁 **Technical Resource:** [View Feature Engineering Notebook](./Notebooks/03_feature-engineering.ipynb)
 
 ### 1. Financial Capacity Ratios
 We moved beyond raw numbers to calculate the true financial strain on the borrower:
@@ -179,6 +185,9 @@ The CRS is translated into 3 actionable **Decision Zones** for stakeholders:
 
 **Objective:** To conduct a comprehensive, end-to-end scientific validation of all features—proving significance and ensuring structural integrity.
 
+> 📁 **Technical Resource:** [View Statistical Testing and Validation Notebook](./Notebooks/04_statistical_testing.ipynb)
+
+
 ### 1. Categorical Variable Validation (Chi-Square Test)
 We applied the **Chi-Square Test of Independence** to confirm that our categorical segments and flags are not due to random chance.
 * **Key Findings:** All features achieved p-values far below $\alpha = 0.05$.
@@ -215,6 +224,8 @@ A Feature Correlation Heatmap was generated to ensure the model remains “lean�
 ## 🤖 Phase 5: Predictive Modeling
 
 **Objective:** The core goal was to develop a high-fidelity classification engine capable of distinguishing reliable borrowers from potential defaulters. Given the banking context, the project prioritized **Recall** to minimize credit losses while ensuring **Interpretability** for regulatory compliance.
+
+> 📁 **Technical Resource:** [View Predictive Modeling Notebook](./Notebooks/05_model_training.ipynb)
 
 ### 🧪 Experimental Setup & Rigor
 To ensure scientific rigor and avoid **Data Leakage**, I implemented a specialized `Scikit-Learn` & `Imbalanced-Learn` Pipeline. This architecture ensures every transformation is applied correctly within the validation framework:
