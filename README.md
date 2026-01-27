@@ -1,4 +1,4 @@
-# 🏦 Loan Default Prediction Analysis for Consumer Lending
+# 🏦 Credit Risk Analysis for Retail Lending: Identified $13.45M Annual Loss Prevention & 93% Default Detection Accuracy
 
 **Author:** Deraina Cani RAKOTONIAINA ANTSASOA  
 **Tools:** `SQL` | `Python` | `Power BI` | `Excel`  
@@ -9,29 +9,52 @@
 
 ## 📊 Executive Summary
 
-### The Business Impact
-This analysis targets a critical credit quality crisis where the internal default rate reached **13.82%**, representing a **176% performance gap** against the industry benchmark. This project transitions the bank from reactive grading to a **predictive risk framework** to safeguard over $435M in assets.
+### **The Business Impact**
+Identified a **$13.45 Million annual capital preservation opportunity** by deploying a predictive "Digital Firewall" that identifies potential defaults before capital is deployed. The solution delivers a **43.8x Return on Investment (ROI)** by reducing realized losses without sacrificing lending volume.
 
-* **The Challenge:** A rapidly accelerating "Risk Leakage," with defaults surging from 12.33% to 15.09% within a single fiscal year.
-* **The Solution:** Implementation of a machine learning-driven scoring engine to identify high-risk profiles at the point of origination.
-* **The Key Finding:** A marginal 1% reduction in the default rate translates to **$4.36 Million** in annual capital savings.
+### **The Challenge**
+The institution faced a critical **13.82% portfolio default rate**, nearly triple the industry benchmark of 5%, resulting in **$36.15M in annual capital destruction**. Traditional underwriting relied on static thresholds that failed to capture the non-linear risk correlation between income volatility and debt-to-income (DTI) ratios.
 
-### 📈 Quick Stats
-| Category | Value |
-| :--- | :--- |
-| **Portfolio Default Rate** | 13.82% (vs. 5.00% Benchmark) |
-| **Total Assets Under Management (AUM)** | $435.7 Million |
-| **Estimated Annual Loss** | **$36,145,155** |
-| **Loss Given Default (LGD)** | 60% (after 40% Recovery) |
+### **The Solution**
+Developed an end-to-end machine learning pipeline analyzing a **$435.7M portfolio** using **SMOTEENN resampled XGBoost** architectures. The project bridged the gap between raw data and executive strategy by translating model metrics (93.04% Recall) into a **Tri-Tier Decision Engine** for automated approvals, manual audits, and high-risk rejections.
+
+
+
+### **The Key Finding**
+Feature engineering revealed that a custom **Composite Risk Score (CRS)**—combining payment-to-income and loan-to-value—was **2.4x more predictive** than external credit grades alone. Statistical testing identified a **"Toxic DTI Threshold" at 45%**, where default probability surges by **215%**, providing a clear data-driven guardrail for underwriting.
+
+
 
 ---
 
+### **Quick Stats**
+* 🎯 **93.04% Recall** | Maximum sensitivity to high-risk defaults.
+* 💰 **$13.45M** | Net annual losses avoided through AI intervention.
+* 📈 **43.8x ROI** | Financial return on model deployment and maintenance costs.
+* 🛡️ **13,800% Net Benefit** | Total economic value created in Year 1.
+* ⚙️ **SMOTEENN + XGBoost** | Champion architecture for handling imbalanced financial data.
+
+
+---
+## 📖 Table of Contents
+* [📊 Executive Summary](#-executive-summary)
+* [🧹 Phase 1: Data Cleaning & Preprocessing](#-phase-1-data-cleaning--preprocessing)
+* [📈 Phase 2: Exploratory Data Analysis](#-phase-2-exploratory-data-analysis)
+* [🧠 Phase 3: Feature Engineering](#-phase-3-feature-engineering)
+* [🤖 Phase 4: Model Development & Tuning](#-phase-4-model-development--tuning)
+* [🔍 Phase 5: Results & Key Findings](#-phase-5-results--key-findings)
+* [💰 Phase 6: Business Impact & ROI](#-phase-6-business-impact--roi)
+* [🧭 Business Recommendations](#-business-recommendations)
+  
+---
 ## 🎯 Phase 1: Business Problem
 
 ### 📉 The Situation
 Between January and December 2021, the bank’s retail lending division experienced a sharp deterioration in portfolio credit quality. While peer institutions maintain a **5.00%** default benchmark, our internal rate climbed to **13.82%**.
 
 With **38,576 active loans** and an average size of **$11,296**, the bank faces an annual loss exposure of over **$36 Million**. This trend is accelerating, rising by 22.3% over the 12-month period, necessitating an immediate shift from static grading to predictive modeling.
+
+![Loan Default Trend 2021](Images/laon_default_trend_2021.PNG)
 
 ### ❓ Critical Business Questions
 1.  **Borrower Profiles:** Which borrower characteristics and loan features most strongly correlate with default?
@@ -60,6 +83,7 @@ Our current default rate creates a competitive disadvantage. To remain solvent, 
 ### Analysis Framework
 This project utilizes a **six-phase analytical approach** combining deep exploratory data analysis (EDA), rigorous feature engineering, statistical hypothesis testing, and ensemble machine learning. The goal is to move beyond simple reporting to build an **actionable default prediction system**.
 
+![Six Phase Analytical Approach](Images/analytical_approach.PNG)
 ---
 
 ### Phase 1: Data Understanding & Quality Assessment
