@@ -88,13 +88,15 @@ This project utilizes a **six-phase analytical approach** combining deep explora
 
 ### Phase 1: Data Understanding & Quality Assessment
 **Objective:** Conduct a comprehensive audit of the **38,576-record** loan portfolio to establish a “Single Source of Truth,” ensuring data integrity and alignment with banking business rules prior to modeling.
-
+> 📁 **Technical Resource:** [View Data Cleaning & Audit Notebook](./Notebooks/01_data_cleaning.ipynb)
 #### 🛠️ Activities
 * **Ingestion & Profiling:** Loaded and profiled 38,576 records across 24 financial and demographic variables.
 * **Multidimensional Quality Audit:** Evaluated the dataset across **6 rigorous dimensions**: Completeness, Validity, Consistency, Uniqueness, Timeliness, and Accuracy.
 * **Statistical Outlier Detection:** Utilized the **Interquartile Range (IQR) method** on `annual_income` to isolate extreme values that could skew risk assessments.
 * **Temporal Integrity Mapping:** Audited date-based columns (`last_credit_pull_date`, `last_payment_date`, and `next_payment_date`) to resolve chronological violations relative to the `issue_date`.
 * **Business Rule Enforcement:** Validated records against core lending constraints, specifically ensuring `loan_amount` ≥ $1,000 and `total_payment` ≥ `loan_amount`.
+  
+![Loan Portfolio Composition](Images/loan_portfolio_composition.PNG)
 
 #### 📊 Key Audit Findings
 | Metric | Result |
