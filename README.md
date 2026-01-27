@@ -137,6 +137,53 @@ This project utilizes a **six-phase analytical approach** combining deep explora
 
 **Tools Used:** `Python` (`Matplotlib`, `Seaborn`), `Scipy` (Statistical Tests)
 
+## Phase 2: Exploratory Data Analysis (EDA)
+
+**Objective:** Dissect behavioral and financial drivers to isolate the **“Risk Signatures”** that distinguish solvent borrowers from defaults.  
+📁 **Technical Resource:** [View Exploratory Data Analysis Notebook](./Notebooks/EDA.ipynb)
+
+### 🛠️ Activities
+* **Target Distribution Analysis:** Confirmed the 85.8%/14.2% split, establishing the necessity for **High Recall** on the minority "Charged Off" class.
+* **Univariate Profiling:** Used histograms and boxplots to identify distribution skews and inform necessary feature transformations.
+* **Bivariate Correlation:** Developed a heatmap to identify **multicollinearity** (notably between `loan_amount` and `installment`), enabling a streamlined feature set.
+* **Categorical Risk Assessment:** Quantified the impact of qualitative factors like loan purpose and home ownership using Chi-square testing.
+* **Temporal & Segmentation Analysis:** Built time-series views of default trends and stratified the portfolio into Low/Medium/High-risk clusters.
+
+---
+
+### 💡 Key Strategic Insights
+
+#### 1. The Interest Rate “Tipping Point”
+Borrowers with rates exceeding **20%** exhibit a **28.8x higher default rate**, marking the critical threshold for risk-based pricing. 
+
+![Interest Rate Risk](Images/risk_escalation_by_interest_rate.png)
+*Figure 1: Risk escalation by interest rate tiers.*
+
+#### 2. Credit Grade Precision & Income Sensitivity
+We validated a clear linear risk gradient from Grade A to Grade G, inversely correlated with the borrower's annual income levels.
+
+| Internal Credit Rating | Annual Income Sensitivity |
+|:---:|:---:|
+| ![Credit Grade](Images/credit_grade_gradient.png) | ![Income Sensitivity](Images/income_to_risk_sensitivity.png) |
+| *Linear Risk Gradient (A to G)* | *Default Probability by Income Tier* |
+
+#### 3. Loan Principal & Duration Exposure
+Larger capital amounts and longer repayment terms (60 months) significantly increase the portfolio's vulnerability to default.
+
+| Principal Amount Risk | Impact of Loan Term |
+|:---:|:---:|
+| ![Loan Principals](Images/default_rate_by_loan_principals.png) | ![Risk Exposure](Images/risk_exposure_by_loan_duration.png) |
+| *Default Rate by Loan Amount Bins* | *36 vs. 60 Months Risk Exposure* |
+
+#### 4. Multicollinearity Audit
+Before modeling, a final correlation audit was performed to identify redundant features, notably the $r=0.93$ link between loan amount and monthly installments.
+
+![Multicollinearity Assessment](Images/multicollinearity_assessment.png)
+*Figure 2: Feature Correlation Matrix (Midnight & Gold Palette)*
+
+
+**Tools Used:** Python (Matplotlib, Seaborn), Scipy (Statistical Tests)
+---
 ## 🏗️ Phase 3: Feature Engineering
 
 **Objective:** To transform raw loan application data into high-signal predictive features, culminating in a **proprietary Composite Risk Score (CRS)** that quantifies default probability.
