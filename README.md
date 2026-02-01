@@ -1,10 +1,12 @@
 # 🏦 Credit Risk Analysis for Retail Lending: Identified $13.45M Annual Loss Prevention & 93% Default Detection Accuracy
 
-**Author:** Deraina Cani RAKOTONIAINA ANTSASOA  
-**Tools:** `SQL` | `Python` | `Power BI` | `Excel`  
-**Contact:** [LinkedIn Profile]([https://www.linkedin.com/in/deraina-cani/)](https://www.linkedin.com/in/deraina-cani/)) 
-| 📱 +261 34 09 821 54
 
+---
+**Author:** Deraina Cani RAKOTONIAINA ANTSASOA  
+**Tech Stack:** `Python (Scikit-Learn)` | `Logistic Regression` | `Pandas` | `Statistical Testing` |   
+**Contact:** [LinkedIn](https://www.linkedin.com/in/deraina-cani/) 
+| [📧 antsasoaderaina@gmail.com](mailto:antsasoaderaina@gmail.com) 
+| [💬 WhatsApp](https://wa.me/261340982154)
 ---
 
 ## 📊 Executive Summary
