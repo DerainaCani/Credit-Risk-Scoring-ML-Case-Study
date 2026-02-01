@@ -37,14 +37,19 @@ Feature engineering revealed that a custom **Composite Risk Score (CRS)**—comb
 
 ---
 ## 📖 Table of Contents
+
 * [📊 Executive Summary](#-executive-summary)
-* [🧹 Phase 1: Data Cleaning & Preprocessing](#-phase-1-data-cleaning--preprocessing)
-* [📈 Phase 2: Exploratory Data Analysis](#-phase-2-exploratory-data-analysis)
-* [🧠 Phase 3: Feature Engineering](#-phase-3-feature-engineering)
-* [🤖 Phase 4: Model Development & Tuning](#-phase-4-model-development--tuning)
-* [🔍 Phase 5: Results & Key Findings](#-phase-5-results--key-findings)
-* [💰 Phase 6: Business Impact & ROI](#-phase-6-business-impact--roi)
-* [🧭 Business Recommendations](#-business-recommendations)
+* [🎯 Business Problem](#-phase-1-business-problem)
+* [📈 Methodology](#-methodology)
+    * [🔍 Phase 1: Data Understanding & Quality Assessment](#phase-1-data-understanding--quality-assessment)
+    * [📈 Phase 2: Exploratory Data Analysis (EDA)](#-phase-2-exploratory-data-analysis-eda) 
+    * [🏗️ Phase 3: Feature Engineering](#️-phase-3-feature-engineering)
+    * [🔬 Phase 4: Statistical Testing & Validation](#-phase-4-statistical-testing--validation)
+    * [🤖 Phase 5: Predictive Modeling & ML Pipeline](#-phase-5-predictive-modeling)
+    * [💰 Phase 6: Business Translation & ROI](#-phase-6-business-translation--roi-calculation)
+* [🧭 Strategic Business Recommendations](#-business-recommendations)
+    
+---
   
 ---
 ## 🎯 Phase 1: Business Problem
@@ -156,7 +161,7 @@ This project utilizes a **six-phase analytical approach** combining deep explora
 #### 1. The Interest Rate “Tipping Point”
 Borrowers with rates exceeding **20%** exhibit a **28.8x higher default rate**, marking the critical threshold for risk-based pricing. 
 
-![Interest Rate Risk](Images/risk_escalation_by_interest_rate.png)
+![Interest Rate Risk](Images/risk_escalation_by_interest_rate.PNG)
 *Figure 1: Risk escalation by interest rate tiers.*
 
 #### 2. Credit Grade Precision & Income Sensitivity
@@ -164,7 +169,7 @@ We validated a clear linear risk gradient from Grade A to Grade G, inversely cor
 
 | Internal Credit Rating | Annual Income Sensitivity |
 |:---:|:---:|
-| ![Credit Grade](Images/credit_grade_gradient.png) | ![Income Sensitivity](Images/income_to_risk_sensitivity.png) |
+| ![Credit Grade](Images/credi_grade_gradient.PNG) | ![Income Sensitivity](Images/income_to_isk_sensivity.PNG) |
 | *Linear Risk Gradient (A to G)* | *Default Probability by Income Tier* |
 
 #### 3. Loan Principal & Duration Exposure
@@ -172,13 +177,13 @@ Larger capital amounts and longer repayment terms (60 months) significantly incr
 
 | Principal Amount Risk | Impact of Loan Term |
 |:---:|:---:|
-| ![Loan Principals](Images/default_rate_by_loan_principals.png) | ![Risk Exposure](Images/risk_exposure_by_loan_duration.png) |
+| ![Loan Principals](Images/default_rate_by_loan_principals.PNG) | ![Risk Exposure](Images/risk_exposure_by_loan_duration.PNG) |
 | *Default Rate by Loan Amount Bins* | *36 vs. 60 Months Risk Exposure* |
 
 #### 4. Multicollinearity Audit
 Before modeling, a final correlation audit was performed to identify redundant features, notably the $r=0.93$ link between loan amount and monthly installments.
 
-![Multicollinearity Assessment](Images/multicollinearity_assessment.png)
+![Multicollinearity Assessment](Images/multicollinearity_assessment.PNG)
 *Figure 2: Feature Correlation Matrix (Midnight & Gold Palette)*
 
 
